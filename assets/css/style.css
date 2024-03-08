@@ -175,6 +175,9 @@ body {
 
 
 
+        .more { display: none; }
+
+
 .pricing-container {
   width: 90%;
   max-width: 1170px;

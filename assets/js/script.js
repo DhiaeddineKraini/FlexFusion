@@ -16,6 +16,22 @@ const addEventOnElem = function (elem, type, callback) {
   }
 }
 
+   function readMore(number) {
+        var dots = document.getElementsByClassName("dots")[number - 1];
+        var moreText = document.getElementsByClassName("more")[number - 1];
+        var btnText = document.querySelectorAll('button')[number - 1]; // Assuming the button order matches
+
+        if (dots.style.display === "none") {
+            dots.style.display = "inline";
+            btnText.textContent = "Read More";
+            moreText.style.display = "none";
+        } else {
+            dots.style.display = "none";
+            btnText.textContent = "Read Less";
+            moreText.style.display = "inline";
+        }
+    }
+
 
 
 /**
