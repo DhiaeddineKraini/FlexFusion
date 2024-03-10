@@ -6,7 +6,23 @@
  * add event on element
  */
  
- 
+ function initializeAuthForm() {
+    const signUpButton = document.getElementById('signUp');
+    const signInButton = document.getElementById('signIn');
+    const container = document.getElementById('container');
+
+    signUpButton.addEventListener('click', () => {
+        container.classList.add("right-panel-active");
+    });
+
+    signInButton.addEventListener('click', () => {
+        container.classList.remove("right-panel-active");
+    });
+}
+
+// Call the function to initialize the form behavior
+initializeAuthForm();
+
  
 
 const addEventOnElem = function (elem, type, callback) {
@@ -156,3 +172,5 @@ jQuery(document).ready(function($){
 		});
 	}
 });
+
+
