@@ -6,34 +6,40 @@
  * add event on element
  */
  
- function initializeAuthForm() {
-    const signUpButton = document.getElementById('signUp');
-    const signInButton = document.getElementById('signIn');
-    const container = document.getElementById('container');
+// JavaScript
 
-    signUpButton.addEventListener('click', () => {
-        container.classList.add("right-panel-active");
-    });
 
-    signInButton.addEventListener('click', () => {
-        container.classList.remove("right-panel-active");
-    });
-}
-
-// Call the function to initialize the form behavior
-initializeAuthForm();
 
  
 
-const addEventOnElem = function (elem, type, callback) {
-  if (elem.length > 1) {
-    for (let i = 0; i < elem.length; i++) {
-      elem[i].addEventListener(type, callback);
+
+
+function initializeAuthForm() {
+    const signUpButton = document.getElementById('signUp');
+    const signInButton = document.getElementById('signIn');
+    const container = document.getElementById('containerSign');
+
+    // Check if elements exist before adding event listeners
+    if (signUpButton && container) {
+        signUpButton.addEventListener('click', () => {
+            container.classList.add("right-panel-active");
+        });
     }
-  } else {
-    elem.addEventListener(type, callback);
-  }
+
+    if (signInButton && container) {
+        signInButton.addEventListener('click', () => {
+            container.classList.remove("right-panel-active");
+        });
+    }
 }
+
+// Execute the function
+document.addEventListener('DOMContentLoaded', () => {
+    initializeAuthForm();
+});
+
+
+
 
    function readMore(number) {
         var dots = document.getElementsByClassName("dots")[number - 1];
@@ -58,16 +64,38 @@ const addEventOnElem = function (elem, type, callback) {
  * navbar toggle
  */
 
+'use strict';
+
+// Function to add event listeners to elements
+const addEventOnElem = function (elem, type, callback) {
+  if (elem.length > 1) {
+    for (let i = 0; i < elem.length; i++) {
+      elem[i].addEventListener(type, callback);
+    }
+  } else {
+    elem.addEventListener(type, callback);
+  }
+};
+
+// Selecting elements for the navbar functionality
 const navbar = document.querySelector("[data-navbar]");
 const navTogglers = document.querySelectorAll("[data-nav-toggler]");
 const navLinks = document.querySelectorAll("[data-nav-link]");
 
-const toggleNavbar = function () { navbar.classList.toggle("active"); }
+// Function to toggle the navbar's 'active' class
+const toggleNavbar = function () { 
+  navbar.classList.toggle("active"); 
+};
 
+// Adding click event listeners to navbar toggler elements
 addEventOnElem(navTogglers, "click", toggleNavbar);
 
-const closeNavbar = function () { navbar.classList.remove("active"); }
+// Function to remove the navbar's 'active' class
+const closeNavbar = function () { 
+  navbar.classList.remove("active"); 
+};
 
+// Adding click event listeners to navbar link elements
 addEventOnElem(navLinks, "click", closeNavbar);
 
 
