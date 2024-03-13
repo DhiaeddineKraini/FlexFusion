@@ -1,24 +1,28 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
+
+ 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>FlexFusion - Work Hard To Get Better Life</title>
 
-  <!-- 
+  <!--
     - favicon
   -->
   <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
 
-  <!-- 
+  <!--
     - custom css link
   -->
   <link rel="stylesheet" href="./assets/css/style.css">
 
-  <!-- 
+  <!--
     - google font link
   -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,7 +31,7 @@
     href="https://fonts.googleapis.com/css2?family=Catamaran:wght@600;700;800;900&family=Rubik:wght@400;500;800&display=swap"
     rel="stylesheet">
 
-  <!-- 
+  <!--
     - preload images
   -->
   <link rel="preload" as="image" href="./assets/images/hero-banner.png">
@@ -36,7 +40,8 @@
   <link rel="preload" as="image" href="./assets/images/heart-rate.svg">
   <link rel="preload" as="image" href="./assets/images/calories.svg">
 
-<script type="text/javascript">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script  type="text/javascript">
   (function(d, t) {
       var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
       v.onload = function() {
@@ -53,7 +58,7 @@
 
 <body id="top">
 
-  <!-- 
+  <!--
     - #HEADER
   -->
 
@@ -79,26 +84,30 @@
           </li>
 
           <li>
-            <a href="#about" class="navbar-link" data-nav-link>About Us</a>
+            <a href="index.html" class="navbar-link" data-nav-link>About Us</a>
           </li>
 
           <li>
-            <a href="#class" class="navbar-link" data-nav-link>Classes</a>
+            <a href="index.html" class="navbar-link" data-nav-link>Classes</a>
           </li>
 
           <li>
-            <a href="#blog" class="navbar-link" data-nav-link>Blog</a>
+            <a href="blog.html" class="navbar-link" data-nav-link>Blog</a>
+          </li>
+
+ <li>
+            <a href="tracker.html" class="navbar-link" data-nav-link>Body Tracker</a>
           </li>
 
           <li>
-            <a href="#" class="navbar-link" data-nav-link>Contact Us</a>
+            <a href="contact.html" class="navbar-link" data-nav-link>Contact Us</a>
           </li>
 
         </ul>
 
       </nav>
 
-      <a href="#" class="btn btn-secondary">Join Now</a>
+      <a href="join.html" class="btn btn-secondary">Join Now</a>
 
       <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
         <span class="line"></span>
@@ -116,15 +125,15 @@
   <main>
     <article>
 
-      <!-- 
+      <!--
         - #HERO
       -->
 
       <section class="section hero bg-dark has-after has-bg-image" id="home" aria-label="hero" data-section
         style="background-image: url('./assets/images/hero-bg.png')">
         <div class="container">
-<h1 class="h1 hero-title">Our Blog </h1>
-<img src="./assets/images/blog.png" width="660" height="753" alt="hero banner" class="w-100">
+<h1 class="h1 hero-title">Body Weight Tracker </h1>
+<img src="./assets/images/tracker.png" width="60" height="553" alt="hero banner" class="w-100">
 
         </div>
       </section>
@@ -132,130 +141,91 @@
 
 
 
-
-
-      <!-- 
-        - #BLOG
+      <!--
+        - #TRACKER
       -->
 
-      <section class="section blog" id="blog" aria-label="blog">
-        <div class="container">
-
-          <p class="section-subtitle">Our News</p>
-
-          <h2 class="h2 section-title text-center">Latest Blog Feed</h2>
-
-          <ul class="blog-list has-scrollbar">
-
-            <li class="scrollbar-item">
-              <div class="blog-card">
-
-                <div class="card-banner img-holder" style="--width: 440; --height: 270;">
-                  <img src="./assets/images/blog-1.jpg" width="440" height="270" loading="lazy"
-                    alt="Going to the gym for the first time" class="img-cover">
-
-                  <time class="card-meta" datetime="2022-07-07">10 February 2024</time>
-                </div>
-
-                <div class="card-content">
-
-                  <h3 class="h3">
-                    <a href="#" class="card-title">Going to the gym for the first time</a>
-                  </h3>
-
-            
-
-<p>FlexFusion Gym welcomes first-time gym-goers with a supportive atmosphere and essential guidance. <span class="dots">...</span><span class="more">Start with an orientation to learn equipment use and gym layout. Set realistic fitness goals and practice proper gym etiquette, like wiping down machines and re-racking weights. Remember, everyone starts somewhere, and your fitness journey at FlexFusion is a step toward a healthier life.</span></p>
-<<<<<<< HEAD
-<button onclick="readMore('1')"class="has-before" >Read More</button>
-=======
-<button onclick="readMore('1')"class="has-before">Read More</button>
->>>>>>> cd2be567c4682b1c570985e0160dde1906d68749
+  <section class="section tracker" id="tracker" aria-label="tracker">
+    <div class="container">
 
 
+      <div class="about-content">
+
+        <h2 class="h2 section-title">Keep Track on your Body Weight</h2>
 
 
-                </div>
+        <div class="wrapper">
 
-              </div>
-            </li>
+          <div class="tracker">
 
-            <li class="scrollbar-item">
-              <div class="blog-card">
+            <figure class="bodyweight-icon">
+              <img src="./assets/images/bodyweight.png" width="250" height="250" loading="lazy" alt="Trainer">
+            </figure>
 
-                <div class="card-banner img-holder" style="--width: 440; --height: 270;">
-                  <img src="./assets/images/blog-2.jpg" width="440" height="270" loading="lazy"
-                    alt="Parturient accumsan cacus pulvinar magna" class="img-cover">
+            <div>
+              <label for="targetWeight">Target Body Weight:</label>
+              <input type="number" id="targetWeight" placeholder="Enter your target weight (kg)">
 
-                  <time class="card-meta" datetime="2022-07-07">12 February 2024</time>
-                </div>
+              <label for="date">Date:</label>
+              <input type="date" id="date">
 
-                <div class="card-content">
+              <label for="weight">Body Weight:</label>
+              <input type="number" id="weight" placeholder="Enter your body weight (kg)">
 
-                  <h3 class="h3">
-                    <a href="#" class="card-title">Be the smartest person in your gym</a>
-                  </h3>
+            </div>
 
-                  <p class="card-text">
-                  The Breaking Muscle newsletter is everything you need to know about strength in a 3 minute read.
-                  </p>
+ <a class="btn btn-primary" onclick="addData()">Add Data</a>
+          </div>
 
-<p>To be the smartest person in your gym, prioritize knowledge about fitness, nutrition, and wellness.  <span class="dots">...</span><span class="more">Learn the science behind exercises, understand proper form, and stay updated on the latest fitness trends and research. Nutrition plays a key role, so educate yourself on balanced diets and supplementation. Embrace a holistic approach to health, incorporating mental well-being and recovery strategies. At FlexFusion Gym, being smart about your fitness journey means integrating knowledge into practice for optimal health and performance.</span></p>
-<button onclick="readMore('2')" class="has-before">Read More</button>
-                </div>
-
-              </div>
-            </li>
-
-            <li class="scrollbar-item">
-              <div class="blog-card">
-
-                <div class="card-banner img-holder" style="--width: 440; --height: 270;">
-                  <img src="./assets/images/blog-3.jpg" width="440" height="270" loading="lazy"
-                    alt="Risus purus namien parturient accumsan cacus" class="img-cover">
-
-                  <time class="card-meta" datetime="2022-07-07">14 February 2024</time>
-                </div>
-
-                <div class="card-content">
-
-                  <h3 class="h3">
-                    <a href="#" class="card-title">30-Minute Gym Workout</a>
-                  </h3>
-
-                  <p class="card-text">
-                   Your running journey is an exhilarating experience, but to truly elevate your performance and safeguard against injuries, the importance of cross training cannot be overstated. Runners often have questions like: how to start running again?
-                  </p>
-
-<p>A 30-minute gym workout at FlexFusion is perfect for those short on time but committed to fitness. <span class="dots">...</span><span class="more">Focus on high-intensity interval training (HIIT) to maximize calorie burn and enhance cardiovascular health. Combine strength exercises with cardio bursts, targeting different muscle groups for a full-body workout. Use compound movements like squats, deadlifts, and bench presses to engage multiple muscles efficiently. Plan your routine ahead to transition smoothly between exercises, minimizing rest periods. This approach ensures a powerful, effective workout in just half an hour, making every minute count at FlexFusion Gym.</span></p>
-<button onclick="readMore('3')" class="has-before">Read More</button>
-                </div>
-
-              </div>
-            </li>
-
-          </ul>
-
-        </div>
-      </section>
+<canvas id="myChart" width="300" height="150"></canvas>
 
 
+      <!------
+  - #BMI calc
+      -------->
+
+<h2 class="h2 section-title">Check you BMI</h2>
+ <div class = "bmicalc">
+           
+
+    <figure class="bmi-icon">
+              <img src="./assets/images/bmi.png" loading="lazy" alt="Trainer">
+            </figure>
+
+<div>
+    <label for="inputheight">Enter your height (cm):</label>
+            <input type="number" id="inputheight" placeholder="Enter your height (cm)">
+
+    <label for="inputweight">Body Weight:</label>
+            <input type="number" id="inputweight" placeholder="Enter your body weight (kg)">
+</div>
+     
+</div>
+     
+         <a class="btn btn-primary" onclick="calculate()">Calculate</a>
+
+   <label for="bmi">Your BMI:</label>
+   <output type="number" id="bmi" >
+
+       
+
+     
    
+<!-------------------------->
 
 
-      <!-- 
-        - #BLOG
-      -->
+        </div>
+
+       
+
+      </div>
+
+    </div>
+  </section>
 
 
-    </article>
-  </main>
 
-
-
-
-
-  <!-- 
+  <!--
     - #FOOTER
   -->
 
@@ -272,7 +242,7 @@
             <span class="span">FlexFusion</span>
           </a>
 
-          
+         
           <div class="wrapper">
 
             <img src="./assets/images/footer-clock.png" width="34" height="34" loading="lazy" alt="Clock">
@@ -316,11 +286,15 @@
           </li>
 
           <li>
-            <a href="#" class="footer-link">Blog</a>
+            <a href="blog.html" class="footer-link">Blog</a>
+          </li>
+
+ <li>
+            <a href="tracker.html" class="footer-link">Body Tracker</a>
           </li>
 
           <li>
-            <a href="#" class="footer-link">Contact Us</a>
+            <a href="contact.html" class="footer-link">Contact Us</a>
           </li>
 
         </ul>
@@ -333,7 +307,7 @@
 
           <li class="footer-list-item">
 
-            
+           
 
           <li class="footer-list-item">
             <div class="icon">
@@ -414,7 +388,7 @@
           &copy; 2024 FlexFusion.
         </p>
 
-      
+     
 
       </div>
     </div>
@@ -425,7 +399,7 @@
 
 
 
-  <!-- 
+  <!--
     - #BACK TO TOP
   -->
 
@@ -437,16 +411,89 @@
 
 
 
-  <!-- 
+  <!--
     - custom js link
   -->
   <script src="./assets/js/script.js" defer></script>
 
-  <!-- 
+  <!--
     - ionicon link
   -->
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+
+ 
+  <script>
+    const ctx = document.getElementById('myChart').getContext('2d');
+    let dates = [];
+    let weights = [];
+    let targetWeights = []; // Declared as an array
+    let myChart;
+
+    document.addEventListener('DOMContentLoaded', function () {
+      myChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+          labels: dates,
+          datasets: [
+            {
+              label: 'Body Weight',
+              data: weights,
+              backgroundColor: 'rgba(54, 162, 235, 0.2)',
+              borderColor: 'rgba(54, 162, 235, 1)',
+              borderWidth: 1
+            },
+            {
+              label: 'Target Weight',
+              data: targetWeights, // Use the targetWeights array here
+              backgroundColor: 'rgba(154, 62, 135, 0.2)',
+              borderColor: 'rgba(154, 62, 135, 1)',
+              borderWidth: 1
+            }
+          ]
+        },
+        options: {
+          scales: {
+            y: {
+              beginAtZero: true
+            }
+          }
+        }
+      });
+    });
+
+    function addData() {
+      const date = document.getElementById('date').value;
+      const weight = document.getElementById('weight').value;
+      const targetWeight = document.getElementById('targetWeight').value;
+
+      dates.push(date);
+      weights.push(weight);
+      targetWeights.push(targetWeight); // Push targetWeight value to targetWeights array
+
+      myChart.update();
+    }
+
+   
+    function calculate() {
+  const heightInMeters = parseFloat(document.getElementById('inputheight').value);
+  const weightInKg = parseFloat(document.getElementById('inputweight').value);
+
+  if (isNaN(heightInMeters) || isNaN(weightInKg) || heightInMeters <= 0 || weightInKg <= 0) {
+    alert('Please enter valid height and weight values.');
+    return;
+  }
+ 
+  // Calculate BMI
+  const bmi = weightInKg / (heightInMeters * heightInMeters);
+
+  // Display BMI
+  document.getElementById('bmi').textContent = bmi.toFixed(2); // Update the content of the output field with rounded BMI value
+}
+
+  </script>
+
 
 </body>
 
