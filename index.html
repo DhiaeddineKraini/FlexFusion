@@ -441,6 +441,58 @@
       <!-- 
         - #BLOG
       -->
+	  
+	  
+	  <section class="section bmicalc" id="bmicalc" aria-label="bmicalc">
+  <div class="container">
+
+    <div class="bmi banner">
+      <img src="./assets/images/bmi.png" width="650" height="154" loading="lazy" alt="fitness">
+    </div>
+
+    <div class="calc bmi">
+      <p class="section-subtitle">BMI Calculator</p>
+      <h2 class="h2 section-title">Check Your BMI</h2>
+
+      <div class="wrapper">
+        <div class="input data">
+          <div>
+            <label for="inputheight">Enter your height (cm):</label>
+            <input type="number" id="inputheight" placeholder="Enter your height (cm)">
+          </div>
+          <div>
+            <label for="inputweight">Enter your weight (kg):</label>
+            <input type="number" id="inputweight" placeholder="Enter your weight (kg)">
+          </div>
+        </div>
+        <button class="btn btn-primary" onclick="calculateBMI()">Calculate</button>
+        <p id="bmiResult"></p> <!-- Display BMI result here -->
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<script>
+
+
+  function calculateBMI() {
+    const heightInMeters = parseFloat(document.getElementById('inputheight').value) / 100; // Convert cm to meters
+    const weightInKg = parseFloat(document.getElementById('inputweight').value);
+
+    if (isNaN(heightInMeters) || isNaN(weightInKg) || heightInMeters <= 0 || weightInKg <= 0) {
+      document.getElementById('bmiResult').innerText = 'Please enter valid height and weight values.';
+      return;
+    }
+
+    const bmi = weightInKg / (heightInMeters * heightInMeters);
+    document.getElementById('bmiResult').innerText = `Your BMI: ${bmi.toFixed(2)}`;
+
+    // Optional: You can update chart data here based on user's input
+    // For example, you can push new weight data to weights array and update the chart
+  }
+</script>
 
 
     </article>
