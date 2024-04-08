@@ -179,33 +179,293 @@
 
 <canvas id="myChart" width="300" height="150"></canvas>
 
+</section>
 
-      <!------
-  - #BMI calc
-      -------->
 
-<h2 class="h2 section-title">Check you BMI</h2>
- <div class = "bmicalc">
-           
+	
+	<!-- 
+    	- #TRAINING PLAN
+  	-->
 
-    <figure class="bmi-icon">
-              <img src="./assets/images/bmi.png" loading="lazy" alt="Trainer">
-            </figure>
+	<section class="section class bg-dark has-bg-image" id="workplan" aria-label="workplan"　style="border: none;">
+	<title>Track Your Workout</title>
 
-<div>
-    <label for="inputheight">Enter your height (cm):</label>
-            <input type="number" id="inputheight" placeholder="Enter your height (cm)">
+	<h2 class="h2 section-title" style="text-align: center;">Let's Get on with your workout ! </h2>
 
-    <label for="inputweight">Body Weight:</label>
-            <input type="number" id="inputweight" placeholder="Enter your body weight (kg)">
-</div>
-     
-</div>
-     
-         <a class="btn btn-primary" onclick="calculate()">Calculate</a>
+	<div class="parent-container">
+	<div class="tracker">
+  		<div class="week" onclick="showWorkout(1)">Week 1</div>
+  		<div class="week" onclick="showWorkout(2)">Week 2</div>
+  		<div class="week" onclick="showWorkout(3)">Week 3</div>
+  		<div class="week" onclick="showWorkout(4)">Week 4</div>
+  		<div class="week" onclick="showWorkout(5)">Week 5</div>
+  		<div class="week" onclick="showWorkout(6)">Week 6</div>
+  		<div class="week" onclick="showWorkout(7)">Week 7</div>
+  		<div class="week" onclick="showWorkout(8)">Week 8</div>
+	</div>
+	</div>
 
-   <label for="bmi">Your BMI:</label>
-   <output type="number" id="bmi" >
+	<div class="workout" id="workout-1">
+		<h3 style="text-align: center; color: #DB2626">Week 1 Workout</h3>
+  		<table>
+    		<tr>
+      			<th>Exercise</th>
+      			<th>Sets</th>
+      			<th>Reps</th>
+      			<th>Weight</th>
+   		 </tr>
+   		<tr>
+      			<td>Exercise 1</td>
+     			<td>3</td>
+     			<td>12</td>
+      			<td><input type="text"></td>
+    		 </tr>
+    		<tr>
+      			<td>Exercise 2</td>
+      			<td>3</td>
+      			<td>12</td>
+      			<td><input type="text"></td>
+    		 </tr>
+    		<tr>
+      			<td>Exercise 3</td>
+      			<td>3</td>
+      			<td>12</td>
+      			<td><input type="text"></td>
+    	  	 </tr>
+  		</table>
+	</div>
+
+
+	<div class="workout" id="workout-2">
+  		<h3 style="text-align: center; color: #DB2626">Week 2 Workout</h3>
+  		<table>
+    		<tr>
+      			<th>Exercise</th>
+      			<th>Sets</th>
+      			<th>Reps</th>
+      			<th>Weight</th>
+   		 </tr>
+   		<tr>
+      			<td>Exercise 1</td>
+     			<td>3</td>
+     			<td>12</td>
+      			<td><input type="text"></td>
+    		 </tr>
+    		<tr>
+      			<td>Exercise 2</td>
+      			<td>3</td>
+      			<td>12</td>
+      			<td><input type="text"></td>
+    		 </tr>
+    		<tr>
+      			<td>Exercise 3</td>
+      			<td>3</td>
+      			<td>12</td>
+      			<td><input type="text"></td>
+    	  	 </tr>
+  		</table>
+	</div>
+
+	<div class="workout" id="workout-3">
+  		<h3 style="text-align: center; color: #DB2626">Week 3 Workout</h3>
+  		<table>
+    		<tr>
+      			<th>Exercise</th>
+      			<th>Sets</th>
+      			<th>Reps</th>
+      			<th>Weight</th>
+   		 </tr>
+   		<tr>
+      			<td>Exercise 1</td>
+     			<td>3</td>
+     			<td>12</td>
+      			<td><input type="text"></td>
+    		 </tr>
+    		<tr>
+      			<td>Exercise 2</td>
+      			<td>3</td>
+      			<td>12</td>
+      			<td><input type="text"></td>
+    		 </tr>
+    		<tr>
+      			<td>Exercise 3</td>
+      			<td>3</td>
+      			<td>12</td>
+      			<td><input type="text"></td>
+    	  	 </tr>
+  		</table>
+	</div>
+
+	<div class="workout" id="workout-4">
+  		<h3 style="text-align: center; color: #DB2626">Week 4 Workout</h3>
+  		<table>
+    		<tr>
+      			<th>Exercise</th>
+      			<th>Sets</th>
+      			<th>Reps</th>
+      			<th>Weight</th>
+   		 </tr>
+   		<tr>
+      			<td>Exercise 1</td>
+     			<td>3</td>
+     			<td>12</td>
+      			<td><input type="text"></td>
+    		 </tr>
+    		<tr>
+      			<td>Exercise 2</td>
+      			<td>3</td>
+      			<td>12</td>
+      			<td><input type="text"></td>
+    		 </tr>
+    		<tr>
+      			<td>Exercise 3</td>
+      			<td>3</td>
+      			<td>12</td>
+      			<td><input type="text"></td>
+    	  	 </tr>
+  		</table>
+	</div>
+
+	<div class="workout" id="workout-5">
+  		<h3 style="text-align: center; color: #DB2626">Week 5 Workout</h3>
+  		<table>
+    		<tr>
+      			<th>Exercise</th>
+      			<th>Sets</th>
+      			<th>Reps</th>
+      			<th>Weight</th>
+   		 </tr>
+   		<tr>
+      			<td>Exercise 1</td>
+     			<td>3</td>
+     			<td>12</td>
+      			<td><input type="text"></td>
+    		 </tr>
+    		<tr>
+      			<td>Exercise 2</td>
+      			<td>3</td>
+      			<td>12</td>
+      			<td><input type="text"></td>
+    		 </tr>
+    		<tr>
+      			<td>Exercise 3</td>
+      			<td>3</td>
+      			<td>12</td>
+      			<td><input type="text"></td>
+    	  	 </tr>
+  		</table>
+	</div>
+
+	<div class="workout" id="workout-6">
+  		<h3 style="text-align: center; color: #DB2626">Week 6 Workout</h3>
+  		<table>
+    		<tr>
+      			<th>Exercise</th>
+      			<th>Sets</th>
+      			<th>Reps</th>
+      			<th>Weight</th>
+   		 </tr>
+   		<tr>
+      			<td>Exercise 1</td>
+     			<td>3</td>
+     			<td>12</td>
+      			<td><input type="text"></td>
+    		 </tr>
+    		<tr>
+      			<td>Exercise 2</td>
+      			<td>3</td>
+      			<td>12</td>
+      			<td><input type="text"></td>
+    		 </tr>
+    		<tr>
+      			<td>Exercise 3</td>
+      			<td>3</td>
+      			<td>12</td>
+      			<td><input type="text"></td>
+    	  	 </tr>
+  		</table>
+	</div>
+
+	<div class="workout" id="workout-7">
+  		<h3 style="text-align: center; color: #DB2626">Week 7 Workout</h3>
+  		<table>
+    		<tr>
+      			<th>Exercise</th>
+      			<th>Sets</th>
+      			<th>Reps</th>
+      			<th>Weight</th>
+   		 </tr>
+   		<tr>
+      			<td>Exercise 1</td>
+     			<td>3</td>
+     			<td>12</td>
+      			<td><input type="text"></td>
+    		 </tr>
+    		<tr>
+      			<td>Exercise 2</td>
+      			<td>3</td>
+      			<td>12</td>
+      			<td><input type="text"></td>
+    		 </tr>
+    		<tr>
+      			<td>Exercise 3</td>
+      			<td>3</td>
+      			<td>12</td>
+      			<td><input type="text"></td>
+    	  	 </tr>
+  		</table>
+	</div>
+
+	<div class="workout" id="workout-8">
+  		<h3 style="text-align: center; color: #DB2626">Week 8 Workout</h3>
+  		<table>
+    		<tr>
+      			<th>Exercise</th>
+      			<th>Sets</th>
+      			<th>Reps</th>
+      			<th>Weight</th>
+   		 </tr>
+   		<tr>
+      			<td>Exercise 1</td>
+     			<td>3</td>
+     			<td>12</td>
+      			<td><input type="text"></td>
+    		 </tr>
+    		<tr>
+      			<td>Exercise 2</td>
+      			<td>3</td>
+      			<td>12</td>
+      			<td><input type="text"></td>
+    		 </tr>
+    		<tr>
+      			<td>Exercise 3</td>
+      			<td>3</td>
+      			<td>12</td>
+      			<td><input type="text"></td>
+    	  	 </tr>
+  		</table>
+	</div>
+	<script>
+		
+	function showWorkout(week) {
+  		// Hide all workouts
+  		var workouts = document.querySelectorAll('.workout');
+  		workouts.forEach(function(workout) {
+   		 workout.classList.remove('active');
+ 		 });
+  
+
+  		var workout = document.getElementById('workout-' + week);
+ 		 workout.classList.add('active');
+		}
+
+	</script>
+
+
+
+</section>
+
+
 
        
 
