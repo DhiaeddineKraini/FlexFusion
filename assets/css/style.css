@@ -1816,12 +1816,8 @@ table {
 
 .tracker .wrapper { margin-block-start: 30px; }
 
-.tracker {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  margin-block-end: 30px;
-}
+
+
 
 .tracker .bodyweight-icon {
   overflow: hidden;
@@ -1858,6 +1854,65 @@ canvas {
   max-width: 800px;
 }
 
+.tracker {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-block-end: 30px;
+}
+
+
+.parent-container {
+  display: flex;
+  justify-content: center;
+}
+
+
+/*-----------------------------------*\
+  #Train plan
+\*-----------------------------------*/
+
+
+  . tracker {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+
+.week {
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+}
+  .week.active {
+    background-color: #e0e0e0;
+  }
+  .workout {
+    margin-top: 20px;
+    display: none;
+  }
+  .workout.active {
+    display: block;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  th, td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+  }
+
+.week.selected {
+  color: #DB2626; /* Change to the desired color when selected */
+}
 
 /*-----------------------------------*\
   #BMI CALC
