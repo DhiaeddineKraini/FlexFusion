@@ -1100,6 +1100,11 @@ table {
   color: var(--silver-metallic);
 }
 
+.bg-light {
+  background-color:white ;
+  color: var(--silver-metallic);
+}
+
 .has-bg-image {
   background-repeat: no-repeat;
   background-position: top left;
@@ -1413,6 +1418,23 @@ table {
   margin-inline-end: 15px;
   border-radius: var(--radius-5);
 }
+
+.hero-subtitle .strongclass {
+  display: inline-block;
+  background-color: var(--coquelicot);
+  padding: 5px 15px;
+  margin-inline-end: 2px;
+  border-radius: var(--radius-5);
+}
+
+.hero-subtitle .strong1 {
+  display: inline-block;
+  background-color: black;
+  padding: 5px 20px;
+  margin-inline-end: 15px;
+  border-radius: var(--radius-5);
+}
+
 
 .hero-title { margin-block: 30px 8px; }
 
