@@ -65,7 +65,7 @@
   <header class="header" data-header>
     <div class="container">
 
-      <a href="index.html" class="logo">
+      <a href="#" class="logo">
         <ion-icon name="barbell-sharp" aria-hidden="true"></ion-icon>
 
         <span class="span">FlexFusion</span>
@@ -84,11 +84,11 @@
           </li>
 
           <li>
-            <a href="about.html" class="navbar-link" data-nav-link>About Us</a>
+            <a href="#" class="navbar-link" data-nav-link>About Us</a>
           </li>
 
           <li>
-            <a href="classes.html" class="navbar-link" data-nav-link>Classes</a>
+            <a href="#" class="navbar-link" data-nav-link>Classes</a>
           </li>
 
           <li>
@@ -191,6 +191,7 @@
 	<title>Track Your Workout</title>
 
 	<h2 class="h2 section-title" style="text-align: center;">Let's Get on with your workout ! </h2>
+
 
 	<div class="parent-container">
 	<div class="tracker">
@@ -444,14 +445,279 @@
       			<td><input type="text"></td>
     	  	 </tr>
   		</table>
+
+	
 	</div>
+
+
+<button onclick="showTracker()" style="color: white">Enter Manually</button>
+
+<div class="parent-container">
+<div class="inputform" id="inputform" style="display: none;">
+    <div class="manweek" onclick="inputWorkout(1)">Week 1</div>
+    <div class="manweek" onclick="inputWorkout(2)">Week 2</div>
+    <div class="manweek" onclick="inputWorkout(3)">Week 3</div>
+    <div class="manweek" onclick="inputWorkout(4)">Week 4</div>
+    <div class="manweek" onclick="inputWorkout(5)">Week 5</div>
+    <div class="manweek" onclick="inputWorkout(6)">Week 6</div>
+    <div class="manweek" onclick="inputWorkout(7)">Week 7</div>
+    <div class="manweek" onclick="inputWorkout(8)">Week 8</div>
+</div>
+</div>
+
+
+  	
+	<div class="inputworkout" id="inputworkout-1" style="display: none;">
+		<h3 style="text-align: center; color: #DB2626">Week 1 Workout</h3>
+  		<table>
+    		<tr>
+      			<th>Exercise</th>
+      			<th>Sets</th>
+      			<th>Reps</th>
+      			<th>Weight</th>
+   		 </tr>
+   		<tr>
+      			<td><input type="text" placeholder = "workout 1" ></td>
+     			<td><input type="number" placeholder = "enter sets"></td>
+     			<td><input type="number" placeholder = "enter reps"></td>
+      			<td><input type="text" placeholder = "weight"></td>
+    		 </tr>
+    		<tr>
+      			<td><input type="text" placeholder = "workout 2" ></td>
+     			<td><input type="number" placeholder = "enter sets"></td>
+     			<td><input type="number" placeholder = "enter reps"></td>
+      			<td><input type="text" placeholder = "weight"></td>
+    		 </tr>
+    		<tr>
+      			<td><input type="text" placeholder = "workout 3" ></td>
+     			<td><input type="number" placeholder = "enter sets"></td>
+     			<td><input type="number" placeholder = "enter reps"></td>
+      			<td><input type="text" placeholder = "weight"></td>
+    	  	 </tr>
+  		</table>
+	</div>
+
+
+	<div class="inputworkout" id="inputworkout-2" style="display: none;">
+  		<h3 style="text-align: center; color: #DB2626">Week 2 Workout</h3>
+  		<table>
+    		<tr>
+      			<th>Exercise</th>
+      			<th>Sets</th>
+      			<th>Reps</th>
+      			<th>Weight</th>
+   		 </tr>
+   		<tr>
+      			<td><input type="text" placeholder = "workout 1" ></td>
+     			<td><input type="number" placeholder = "enter sets"></td>
+     			<td><input type="number" placeholder = "enter reps"></td>
+      			<td><input type="text" placeholder = "weight"></td>
+    		 </tr>
+    		<tr>
+      			<td><input type="text" placeholder = "workout 2" ></td>
+     			<td><input type="number" placeholder = "enter sets"></td>
+     			<td><input type="number" placeholder = "enter reps"></td>
+      			<td><input type="text" placeholder = "weight"></td>
+    		 </tr>
+    		<tr>
+      			<td><input type="text" placeholder = "workout 3" ></td>
+     			<td><input type="number" placeholder = "enter sets"></td>
+     			<td><input type="number" placeholder = "enter reps"></td>
+      			<td><input type="text" placeholder = "weight"></td>
+    	  	 </tr>
+  		</table>
+	</div>
+
+	<div class="inputworkout" id="inputworkout-3" style="display: none;">
+  		<h3 style="text-align: center; color: #DB2626">Week 3 Workout</h3>
+  		<table>
+    		<tr>
+      			<th>Exercise</th>
+      			<th>Sets</th>
+      			<th>Reps</th>
+      			<th>Weight</th>
+   		 </tr>
+   		<tr>
+      			<td><input type="text" placeholder = "workout 1" ></td>
+     			<td><input type="number" placeholder = "enter sets"></td>
+     			<td><input type="number" placeholder = "enter reps"></td>
+      			<td><input type="text" placeholder = "weight"></td>
+    		 </tr>
+    		<tr>
+      			<td><input type="text" placeholder = "workout 2" ></td>
+     			<td><input type="number" placeholder = "enter sets"></td>
+     			<td><input type="number" placeholder = "enter reps"></td>
+      			<td><input type="text" placeholder = "weight"></td>
+    		 </tr>
+    		<tr>
+      			<td><input type="text" placeholder = "workout 3" ></td>
+     			<td><input type="number" placeholder = "enter sets"></td>
+     			<td><input type="number" placeholder = "enter reps"></td>
+      			<td><input type="text" placeholder = "weight"></td>
+    	  	 </tr>
+  		</table>
+	</div>
+
+	<div class="inputworkout" id="inputworkout-4" style="display: none;">
+  		<h3 style="text-align: center; color: #DB2626">Week 4 Workout</h3>
+  		<table>
+    		<tr>
+      			<th>Exercise</th>
+      			<th>Sets</th>
+      			<th>Reps</th>
+      			<th>Weight</th>
+   		 </tr>
+   		<tr>
+      			<td><input type="text" placeholder = "workout 1" ></td>
+     			<td><input type="number" placeholder = "enter sets"></td>
+     			<td><input type="number" placeholder = "enter reps"></td>
+      			<td><input type="text" placeholder = "weight"></td>
+    		 </tr>
+    		<tr>
+      			<td><input type="text" placeholder = "workout 2" ></td>
+     			<td><input type="number" placeholder = "enter sets"></td>
+     			<td><input type="number" placeholder = "enter reps"></td>
+      			<td><input type="text" placeholder = "weight"></td>
+    		 </tr>
+    		<tr>
+      			<td><input type="text" placeholder = "workout 3" ></td>
+     			<td><input type="number" placeholder = "enter sets"></td>
+     			<td><input type="number" placeholder = "enter reps"></td>
+      			<td><input type="text" placeholder = "weight"></td>
+    	  	 </tr>
+  		</table>
+	</div>
+
+	<div class="inputworkout" id="inputworkout-5" style="display: none;">
+  		<h3 style="text-align: center; color: #DB2626">Week 5 Workout</h3>
+  		<table>
+    		<tr>
+      			<th>Exercise</th>
+      			<th>Sets</th>
+      			<th>Reps</th>
+      			<th>Weight</th>
+   		 </tr>
+   		<tr>
+      			<td><input type="text" placeholder = "workout 1" ></td>
+     			<td><input type="number" placeholder = "enter sets"></td>
+     			<td><input type="number" placeholder = "enter reps"></td>
+      			<td><input type="text" placeholder = "weight"></td>
+    		 </tr>
+    		<tr>
+      			<td><input type="text" placeholder = "workout 2" ></td>
+     			<td><input type="number" placeholder = "enter sets"></td>
+     			<td><input type="number" placeholder = "enter reps"></td>
+      			<td><input type="text" placeholder = "weight"></td>
+    		 </tr>
+    		<tr>
+      			<td><input type="text" placeholder = "workout 3" ></td>
+     			<td><input type="number" placeholder = "enter sets"></td>
+     			<td><input type="number" placeholder = "enter reps"></td>
+      			<td><input type="text" placeholder = "weight"></td>
+    	  	 </tr>
+  		</table>
+	</div>
+
+	<div class="inputworkout" id="inputworkout-6" style="display: none;">
+  		<h3 style="text-align: center; color: #DB2626">Week 6 Workout</h3>
+  		<table>
+    		<tr>
+      			<th>Exercise</th>
+      			<th>Sets</th>
+      			<th>Reps</th>
+      			<th>Weight</th>
+   		 </tr>
+   		<tr>
+      			<td><input type="text" placeholder = "workout 1" ></td>
+     			<td><input type="number" placeholder = "enter sets"></td>
+     			<td><input type="number" placeholder = "enter reps"></td>
+      			<td><input type="text" placeholder = "weight"></td>
+    		 </tr>
+    		<tr>
+      			<td><input type="text" placeholder = "workout 2" ></td>
+     			<td><input type="number" placeholder = "enter sets"></td>
+     			<td><input type="number" placeholder = "enter reps"></td>
+      			<td><input type="text" placeholder = "weight"></td>
+    		 </tr>
+    		<tr>
+      			<td><input type="text" placeholder = "workout 3" ></td>
+     			<td><input type="number" placeholder = "enter sets"></td>
+     			<td><input type="number" placeholder = "enter reps"></td>
+      			<td><input type="text" placeholder = "weight"></td>
+    	  	 </tr>
+  		</table>
+	</div>
+
+	<div class="inputworkout" id="inputworkout-7" style="display: none;">
+  		<h3 style="text-align: center; color: #DB2626">Week 7 Workout</h3>
+  		<table>
+    		<tr>
+      			<th>Exercise</th>
+      			<th>Sets</th>
+      			<th>Reps</th>
+      			<th>Weight</th>
+   		 </tr>
+   		<tr>
+      			<td><input type="text" placeholder = "workout 1" ></td>
+     			<td><input type="number" placeholder = "enter sets"></td>
+     			<td><input type="number" placeholder = "enter reps"></td>
+      			<td><input type="text" placeholder = "weight"></td>
+    		 </tr>
+    		<tr>
+      			<td><input type="text" placeholder = "workout 2" ></td>
+     			<td><input type="number" placeholder = "enter sets"></td>
+     			<td><input type="number" placeholder = "enter reps"></td>
+      			<td><input type="text" placeholder = "weight"></td>
+    		 </tr>
+    		<tr>
+      			<td><input type="text" placeholder = "workout 3" ></td>
+     			<td><input type="number" placeholder = "enter sets"></td>
+     			<td><input type="number" placeholder = "enter reps"></td>
+      			<td><input type="text" placeholder = "weight"></td>
+    	  	 </tr>
+  		</table>
+	</div>
+
+	<div class="inputworkout" id="inputworkout-8" style="display: none;">
+  		<h3 style="text-align: center; color: #DB2626">Week 8 Workout</h3>
+  		<table>
+    		<tr>
+      			<th>Exercise</th>
+      			<th>Sets</th>
+      			<th>Reps</th>
+      			<th>Weight</th>
+   		 </tr>
+   		<tr>
+      			<td><input type="text" placeholder = "workout 1" ></td>
+     			<td><input type="number" placeholder = "enter sets"></td>
+     			<td><input type="number" placeholder = "enter reps"></td>
+      			<td><input type="text" placeholder = "weight"></td>
+    		 </tr>
+    		<tr>
+      			<td><input type="text" placeholder = "workout 2" ></td>
+     			<td><input type="number" placeholder = "enter sets"></td>
+     			<td><input type="number" placeholder = "enter reps"></td>
+      			<td><input type="text" placeholder = "weight"></td>
+    		 </tr>
+    		<tr>
+      			<td><input type="text" placeholder = "workout 3" ></td>
+     			<td><input type="number" placeholder = "enter sets"></td>
+     			<td><input type="number" placeholder = "enter reps"></td>
+      			<td><input type="text" placeholder = "weight"></td>
+    	  	 </tr>
+  		</table>
+	</div>
+
+
+	
+
 	<script>
 		
 	function showWorkout(week) {
   		// Hide all workouts
   		var workouts = document.querySelectorAll('.workout');
   		workouts.forEach(function(workout) {
-   		 workout.classList.remove('active');
+   		workout.classList.remove('active');
  		 });
   
 
@@ -459,10 +725,46 @@
  		 workout.classList.add('active');
 		}
 
+
+    function showTracker() {
+        var tracker = document.getElementById('inputform');
+        tracker.style.display = 'block';
+    }
+
+    function inputWorkout(week) {
+        // Hide all workout forms
+        var inputForms = document.querySelectorAll('.inputworkout');
+        inputForms.forEach(function(inputForm) {
+            inputForm.style.display = 'none';
+        });
+
+        // Show the selected workout form
+        var selectedForm = document.getElementById('inputworkout-' + week);
+        selectedForm.style.display = 'block';
+    }
 	</script>
 
-
-
+<div class="parent-container">
+<a href="https://seux0dmc1hh.typeform.com/to/KCg8isNV">
+    	<button class="cssbuttons-io-button">
+  		Give us a feedback!
+  	<div class="icon">
+    	<svg
+     	 height="24"
+     	 width="24"
+     	 viewBox="0 0 24 24"
+     	 xmlns="http://www.w3.org/2000/svg"
+    	>
+     	<path d="M0 0h24v24H0z" fill="none"></path>
+      	<path
+        d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"
+        fill="currentColor"
+      	></path>
+    	</svg>
+  	</div>
+	</button>
+	</a>
+</div>
 </section>
 
 
@@ -538,11 +840,11 @@
           </li>
 
           <li>
-            <a href="about.html" class="footer-link">About Us</a>
+            <a href="#" class="footer-link">About Us</a>
           </li>
 
           <li>
-            <a href="classes.html" class="footer-link">Classes</a>
+            <a href="#" class="footer-link">Classes</a>
           </li>
 
           <li>
