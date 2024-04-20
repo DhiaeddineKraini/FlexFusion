@@ -1,0 +1,407 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+
+ 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FlexFusion - Work Hard To Get Better Life</title>
+
+  <!--
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+
+  <!--
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!--
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Catamaran:wght@600;700;800;900&family=Rubik:wght@400;500;800&display=swap"
+    rel="stylesheet">
+
+  <!--
+    - preload images
+  -->
+  <link rel="preload" as="image" href="./assets/images/hero-banner.png">
+  <link rel="preload" as="image" href="./assets/images/hero-circle-one.png">
+  <link rel="preload" as="image" href="./assets/images/hero-circle-two.png">
+  <link rel="preload" as="image" href="./assets/images/heart-rate.svg">
+  <link rel="preload" as="image" href="./assets/images/calories.svg">
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script  type="text/javascript">
+  (function(d, t) {
+      var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
+      v.onload = function() {
+        window.voiceflow.chat.load({
+          verify: { projectID: '65cb5d6cd5b9292dece66d04' },
+          url: 'https://general-runtime.voiceflow.com',
+          versionID: 'production'
+        });
+      }
+      v.src = "https://cdn.voiceflow.com/widget/bundle.mjs"; v.type = "text/javascript"; s.parentNode.insertBefore(v, s);
+  })(document, 'script');
+</script>
+</head>
+
+<body id="top">
+
+  <!--
+    - #HEADER
+  -->
+
+  <header class="header" data-header>
+    <div class="container">
+
+      <a href="#" class="logo">
+        <ion-icon name="barbell-sharp" aria-hidden="true"></ion-icon>
+
+        <span class="span">FlexFusion</span>
+      </a>
+
+      <nav class="navbar" data-navbar>
+
+        <button class="nav-close-btn" aria-label="close menu" data-nav-toggler>
+          <ion-icon name="close-sharp" aria-hidden="true"></ion-icon>
+        </button>
+
+        <ul class="navbar-list">
+
+          <li>
+            <a href="index.html" class="navbar-link active" data-nav-link>Home</a>
+          </li>
+
+          <li>
+            <a href="#" class="navbar-link" data-nav-link>About Us</a>
+          </li>
+
+          <li>
+            <a href="#" class="navbar-link" data-nav-link>Classes</a>
+          </li>
+
+          <li>
+            <a href="blog.html" class="navbar-link" data-nav-link>Blog</a>
+          </li>
+
+ <li>
+            <a href="tracker.html" class="navbar-link" data-nav-link>Body Tracker</a>
+          </li>
+
+          <li>
+            <a href="contact.html" class="navbar-link" data-nav-link>Contact Us</a>
+          </li>
+
+        </ul>
+
+      </nav>
+
+      <a href="join.html" class="btn btn-secondary">Join Now</a>
+
+      <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </button>
+
+    </div>
+  </header>
+
+
+
+
+  <main>
+    <article>
+
+
+
+
+<!-- DAILY FITNESS LOG -->
+
+      <section class="section hero bg-dark has-after has-bg-image" id="home" aria-label="hero" data-section
+        style="background-image: url('./assets/images/hero-bg.png')">
+	</section>
+
+	<div class="container">
+        	<div class="parent-container">
+
+		<div class="exercise">
+
+	
+
+            	<h1 style= "padding: 40px; margin: auto;">Your Diary: </h1>
+            
+            	<input type="datetime-local">
+            
+            	<div id="calender" style="position: relative;"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-CTz2j_sMgAmRO4uxILnUgoXJ9JJ7vCD_Ng&usqp=CAU" alt="calender" height="50px" width="50px"/></div>
+        
+
+
+        <div id="main_calender"></div>
+        <div class="line"></div>
+        <table>
+            <tr class="calender_day">
+                <td class="td_first">Entry/Days</td>
+		<td class="td_first_column">
+                    <div>Sunday</div>
+                </td>
+		<td class="td_first_column">
+                    <div>Monday</div>
+                </td>  
+                <td class="td_first_column">
+                    <div>Tuesday</div>
+                </td>
+                <td class="td_first_column">
+                    <div>Wednesday</div>
+                </td>
+		<td class="td_first_column">
+                    <div>Thursday</div>
+                </td>
+		<td class="td_first_column">
+                    <div>Friday</div>
+                </td>
+		<td class="td_first_column">
+                    <div>Saturday</div>
+                </td>
+
+            </tr>
+            
+           
+        </table>
+        <table id="show_exercise_info" class="exercise_info_table"></table>
+ 
+        <div class="line"></div>
+        <table class="table_total">
+
+<!-- Workout Intensity -->
+            <tr>
+                <td class="total_value"><p style="font-weight: bold;font-size: 14px; ">Workout Intensity /</p><p style="color: #00548F;font-size: 14px; ">(1-5)</p></td>
+
+                <td class="total_text"><input type="number" id="myNumber" value="5" style="width: 7em"></td>
+                <td class="total_text"><input type="number" id="myNumber" value="5" style="width: 7em"></td>
+                <td class="total_text"><input type="number" id="myNumber" value="5" style="width: 7em"></td>
+                <td class="total_text"><input type="number" id="myNumber" value="5" style="width: 7em"></td>
+                <td class="total_text"><input type="number" id="myNumber" value="5" style="width: 7em"></td>
+                <td class="total_text"><input type="number" id="myNumber" value="5" style="width: 7em"></td>
+                <td class="total_text"><input type="number" id="myNumber" value="5" style="width: 7em"></td>
+              
+            </tr>
+
+<!-- Workout Duration -->
+            <tr>
+                <td class="total_value"><p style="font-weight: bold;font-size: 14px;">Workout Duration /</p><p style="color:  #00548F;font-size: 14px;">(in minutes)</p></td>
+                
+		<td class="total_text">
+  		<select name="work_dur" id="work_dur">
+    		<option value="0 - 30">0 - 30 minutes</option>
+    		<option value="0 - 30">30 - 60 minutes</option>
+    		<option value="0 - 30">60 - 90 minutes</option>
+    		<option value="0 - 30">90 minutes + </option>
+  		</select>
+		</td>
+
+                <td class="total_text">
+  		<select name="work_dur" id="work_dur">
+    		<option value="0 - 30">0 - 30 minutes</option>
+    		<option value="0 - 30">30 - 60 minutes</option>
+    		<option value="0 - 30">60 - 90 minutes</option>
+    		<option value="0 - 30">90 minutes + </option>
+  		</select>
+		</td>
+
+                <td class="total_text">
+  		<select name="work_dur" id="work_dur">
+    		<option value="0 - 30">0 - 30 minutes</option>
+    		<option value="0 - 30">30 - 60 minutes</option>
+    		<option value="0 - 30">60 - 90 minutes</option>
+    		<option value="0 - 30">90 minutes + </option>
+  		</select>
+		</td>
+
+                <td class="total_text">
+  		<select name="work_dur" id="work_dur">
+    		<option value="0 - 30">0 - 30 minutes</option>
+    		<option value="0 - 30">30 - 60 minutes</option>
+    		<option value="0 - 30">60 - 90 minutes</option>
+    		<option value="0 - 30">90 minutes + </option>
+  		</select>
+		</td>
+
+                <td class="total_text">
+  		<select name="work_dur" id="work_dur">
+    		<option value="0 - 30">0 - 30 minutes</option>
+    		<option value="0 - 30">30 - 60 minutes</option>
+    		<option value="0 - 30">60 - 90 minutes</option>
+    		<option value="0 - 30">90 minutes + </option>
+  		</select>
+		</td>
+
+                <td class="total_text">
+  		<select name="work_dur" id="work_dur">
+    		<option value="0 - 30">0 - 30 minutes</option>
+    		<option value="0 - 30">30 - 60 minutes</option>
+    		<option value="0 - 30">60 - 90 minutes</option>
+    		<option value="0 - 30">90 minutes + </option>
+  		</select>
+		</td>
+
+                <td class="total_text">
+  		<select name="work_dur" id="work_dur">
+    		<option value="0 - 30">0 - 30 minutes</option>
+    		<option value="0 - 30">30 - 60 minutes</option>
+    		<option value="0 - 30">60 - 90 minutes</option>
+    		<option value="0 - 30">90 minutes + </option>
+  		</select>
+		</td>
+            </tr>
+
+
+<!-- Current Body Weight -->
+            <tr>
+
+                <td class="total_value"><p style="font-weight: bold;font-size: 14px;">Current Body Weight /</p><p style="color:  #00548F;font-size: 14px;">(in kcal)</p></td>
+                <td class="total_text"><input type="number" name="email" style="width: 7em"><p style="color: #00548F;font-size: 14px;float: left;">kg</p></td>
+                <td class="total_text"><input type="number" name="email" style="width: 7em"><p style="color: #00548F;font-size: 14px;float: left;">kg</p></td>
+                <td class="total_text"><input type="number" name="email" style="width: 7em"><p style="color: #00548F;font-size: 14px;float: left;">kg</p></td>
+                <td class="total_text"><input type="number" name="email" style="width: 7em"><p style="color: #00548F;font-size: 14px;float: left;">kg</p></td>
+                <td class="total_text"><input type="number" name="email" style="width: 7em"><p style="color: #00548F;font-size: 14px;float: left;">kg</p></td>
+                <td class="total_text"><input type="number" name="email" style="width: 7em"><p style="color: #00548F;font-size: 14px;float: left;">kg</p></td>
+                <td class="total_text"><input type="number" name="email" style="width: 7em"><p style="color: #00548F;font-size: 14px;float: left;">kg</p></td>
+            </tr>
+
+
+<!-- Calorie burned -->
+            <tr>
+                <td class="total_value"><p style="font-weight: bold;font-size: 14px;">Calorie Burned /</p><p style="color:  #00548F;font-size: 14px;">(in kcal)</p></td>
+                <td class="total_text"><input type="number" name="email" style="width: 7em"><p style="color: #00548F;font-size: 14px;float: left;">kcal</p></td>
+                <td class="total_text"><input type="number" name="email" style="width: 7em"><p style="color: #00548F;font-size: 14px;float: left;">kcal</p></td>
+                <td class="total_text"><input type="number" name="email" style="width: 7em"><p style="color: #00548F;font-size: 14px;float: left;">kcal</p></td>
+                <td class="total_text"><input type="number" name="email" style="width: 7em"><p style="color: #00548F;font-size: 14px;float: left;">kcal</p></td>
+                <td class="total_text"><input type="number" name="email" style="width: 7em"><p style="color: #00548F;font-size: 14px;float: left;">kcal</p></td>
+                <td class="total_text"><input type="number" name="email" style="width: 7em"><p style="color: #00548F;font-size: 14px;float: left;">kcal</p></td>
+                <td class="total_text"><input type="number" name="email" style="width: 7em"><p style="color: #00548F;font-size: 14px;float: left;">kcal</p></td>
+            </tr>
+
+
+
+<!-- Calorie Consumed -->
+            <tr>
+                <td class="total_value"><p style="font-weight: bold;font-size: 14px;"> Calorie Consumed /</p><p style="color:  #00548F;font-size: 14px;">(in kcal)</p></td>
+                <td class="total_text"><input type="number" name="email" style="width: 7em"><p style="color: #00548F;font-size: 14px;float: left;">kcal</p></td>
+                <td class="total_text"><input type="number" name="email" style="width: 7em"><p style="color: #00548F;font-size: 14px;float: left;">kcal</p></td>
+                <td class="total_text"><input type="number" name="email" style="width: 7em"><p style="color: #00548F;font-size: 14px;float: left;">kcal</p></td>
+                <td class="total_text"><input type="number" name="email" style="width: 7em"><p style="color: #00548F;font-size: 14px;float: left;">kcal</p></td>
+                <td class="total_text"><input type="number" name="email" style="width: 7em"><p style="color: #00548F;font-size: 14px;float: left;">kcal</p></td>
+                <td class="total_text"><input type="number" name="email" style="width: 7em"><p style="color: #00548F;font-size: 14px;float: left;">kcal</p></td>
+                <td class="total_text"><input type="number" name="email" style="width: 7em"><p style="color: #00548F;font-size: 14px;float: left;">kcal</p></td>
+            </tr>
+
+<!-- Water Intake -->
+            <tr>
+                <td class="total_value"><p style="font-weight: bold;font-size: 14px;">Water Intake /</p><p style="color:  #00548F;font-size: 14px;">(in ml)</p></td>
+                <td class="total_text"><input type="number" name="email" style="width: 7em"><p style="color: #00548F;font-size: 14px;float: left;">ml</p></td>
+                <td class="total_text"><input type="number" name="email" style="width: 7em"><p style="color: #00548F;font-size: 14px;float: left;">ml</p></td>
+                <td class="total_text"><input type="number" name="email" style="width: 7em"><p style="color: #00548F;font-size: 14px;float: left;">ml</p></td>
+                <td class="total_text"><input type="number" name="email" style="width: 7em"><p style="color: #00548F;font-size: 14px;float: left;">ml</p></td>
+                <td class="total_text"><input type="number" name="email" style="width: 7em"><p style="color: #00548F;font-size: 14px;float: left;">ml</p></td>
+                <td class="total_text"><input type="number" name="email" style="width: 7em"><p style="color: #00548F;font-size: 14px;float: left;">ml</p></td>
+                <td class="total_text"><input type="number" name="email" style="width: 7em"><p style="color: #00548F;font-size: 14px;float: left;">ml</p></td>
+<!-- Daily Goal -->
+            <tr>
+                <td class="total_value"><p style="font-weight: bold;font-size: 14px;"> Daily Goal Reached?/</p><p style="color:  #00548F;font-size: 14px;">(yes/no)</p></td>
+                
+		<td class="total_text">
+  		<select name="goal_reached" id="goal_reached">
+    		<option value="yes">YES</option>
+    		<option value="no">NO</option>
+  		</select>
+		</td>
+
+		<td class="total_text">
+  		<select name="goal_reached" id="goal_reached">
+    		<option value="yes">YES</option>
+    		<option value="no">NO</option>
+  		</select>
+		</td>
+
+		<td class="total_text">
+  		<select name="goal_reached" id="goal_reached">
+    		<option value="yes">YES</option>
+    		<option value="no">NO</option>
+  		</select>
+		</td>
+
+		<td class="total_text">
+  		<select name="goal_reached" id="goal_reached">
+    		<option value="yes">YES</option>
+    		<option value="no">NO</option>
+  		</select>
+		</td>
+
+		<td class="total_text">
+  		<select name="goal_reached" id="goal_reached">
+    		<option value="yes">YES</option>
+    		<option value="no">NO</option>
+  		</select>
+		</td>
+
+		<td class="total_text">
+  		<select name="goal_reached" id="goal_reached">
+    		<option value="yes">YES</option>
+    		<option value="no">NO</option>
+  		</select>
+		</td>
+
+		<td class="total_text">
+  		<select name="goal_reached" id="goal_reached">
+    		<option value="yes">YES</option>
+    		<option value="no">NO</option>
+  		</select>
+		</td>
+
+            </tr>
+        </table>
+        
+        <table>
+            
+         
+        </table>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="exercise__note_container">
+            <div style="display: flex;">
+                <p style="font-size: 14px;font-weight: 700; margin: auto; padding: 30px;">Today's Exercises Notes</p>
+
+            </div>
+            <textarea rows="6" cols="120" style="border : 2px solid silver;  position: sticky; margin: auto; padding: 30px;"></textarea>
+        </div>
+        <div class="line"></div>
+     
+	</div>
+    </div>
+	
+</div>
+
+<!-- DAILY FITNESS LOG ends here -->
+
+
+
+</main>
+
+</body>
+
+</html>
