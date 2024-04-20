@@ -1962,7 +1962,7 @@ canvas {
 }
 
 .cssbuttons-io-button {
-  background: #a370f0;
+  background: #FF4B2B;
   color: white;
   font-family: inherit;
   padding: 0.35em;
@@ -1974,7 +1974,7 @@ canvas {
   letter-spacing: 0.05em;
   display: flex;
   align-items: center;
-  box-shadow: inset 0 0 1.6em -0.6em #714da6;
+  box-shadow: inset 0 0 1.6em -0.6em #FF4B2C;
   overflow: hidden;
   position: relative;
   height: 2.8em;
@@ -1992,7 +1992,7 @@ canvas {
   height: 2.2em;
   width: 2.2em;
   border-radius: 0.7em;
-  box-shadow: 0.1em 0.1em 0.6em 0.2em #7b52b9;
+  box-shadow: 0.1em 0.1em 0.6em 0.2em #FF4B2C;
   right: 0.3em;
   transition: all 0.3s;
 }
@@ -2004,7 +2004,7 @@ canvas {
 .cssbuttons-io-button .icon svg {
   width: 1.1em;
   transition: transform 0.3s;
-  color: #7b52b9;
+  color: #FF4B2B;
 }
 
 .cssbuttons-io-button:hover .icon svg {
