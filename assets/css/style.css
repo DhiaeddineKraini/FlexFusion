@@ -1808,6 +1808,51 @@ table {
 .blog-card .btn-link:is(:hover, :focus) { --color: var(--rich-black-fogra-29-1); }
 
 
+/*-----------------------------------*\
+  #diary
+\*-----------------------------------*/
+
+.entry_submit {
+  top: 3px
+  padding: 0.5em 1em;
+  border: none;
+  border-radius: 3px;
+  font-weight: bold;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  cursor: pointer;
+  color: #2c9caf;
+  transition: all 1000ms;
+  font-size: 12px;
+  position: relative;
+  overflow: hidden;
+  outline: 2px solid #2c9caf;
+  background-color: #ffffff;
+}
+
+.entry_submit:hover {
+  color: #ffffff;
+  transform: scale(1.05);
+  outline: 2px solid #70bdca;
+  box-shadow: 3px 4px 12px -3px #268391;
+}
+
+.entry_submit::before {
+  content: "";
+  position: absolute;
+  left: -30px;
+  top: 0;
+  width: 0;
+  height: 100%;
+  background-color: #2c9caf;
+  transform: skewX(45deg);
+  z-index: -1;
+  transition: width 1000ms;
+}
+
+.entry_submit:hover::before {
+  width: 250%;
+}
 
 /*-----------------------------------*\
   #TRACKER
