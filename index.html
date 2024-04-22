@@ -438,6 +438,68 @@
         </div>
       </section>
 
+	    
+
+<div class="container">
+
+
+	
+        <div class="parent-container">
+	<div><h2> Are you a member? Get a referral Code!</h2></div>
+	<div>
+	
+
+          
+            <form id="emailForm" action="" class="footer-form" >
+		<li>
+              <input type="email" name="email_address" aria-label="email" placeholder="Enter Email Address" required
+                class="input-field"　style="border-radius: 50%; color: #1B648E; margin-bottom: 40px;">
+
+          </li>	
+
+              <button class="cta">
+                    <span style = "10px; margin-top = "40px;">Get a referral code</span>
+  
+              
+                <ion-icon name="chevron-forward-sharp" aria-hidden="true"></ion-icon>
+              </button>
+           
+             
+</form>
+</a>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const emailForm = document.getElementById('emailForm');
+
+    emailForm.addEventListener('submit', function(event) {
+      event.preventDefault(); 
+
+      const emailInput = document.querySelector('input[name="email_address"]');
+      const emailValue = emailInput.value;
+
+      if (emailValue.length >= 6) { 
+        const firstThree = emailValue.substring(0, 3);
+        const lastThree = emailValue.substring(emailValue.indexOf('@') - 3, emailValue.indexOf('@'));
+
+        console.log(firstThree, lastThree); 
+
+
+        const resultElement = document.createElement('div');
+        resultElement.textContent = `Referral code: ${firstThree}${lastThree}`;
+
+        emailForm.appendChild(resultElement);
+      } else {
+        alert('Please enter a valid email address');
+      }
+    });
+  });
+</script>
+</div>
+</div>
+</div>
+       
+
 
 	<!------
 	   - #Sample workout plan
