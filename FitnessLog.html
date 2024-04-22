@@ -1,31 +1,24 @@
 
-
 <!DOCTYPE html>
 <html lang="en">
 
-
 <head>
-
- 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>FlexFusion - Work Hard To Get Better Life</title>
 
-  <!--
+  <!-- 
     - favicon
   -->
   <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
 
-  <!--
+  <!-- 
     - custom css link
   -->
   <link rel="stylesheet" href="./assets/css/style.css">
 
-  <!--
+  <!-- 
     - google font link
   -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -34,7 +27,7 @@
     href="https://fonts.googleapis.com/css2?family=Catamaran:wght@600;700;800;900&family=Rubik:wght@400;500;800&display=swap"
     rel="stylesheet">
 
-  <!--
+  <!-- 
     - preload images
   -->
   <link rel="preload" as="image" href="./assets/images/hero-banner.png">
@@ -43,8 +36,7 @@
   <link rel="preload" as="image" href="./assets/images/heart-rate.svg">
   <link rel="preload" as="image" href="./assets/images/calories.svg">
 
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<script  type="text/javascript">
+<script type="text/javascript">
   (function(d, t) {
       var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
       v.onload = function() {
@@ -59,7 +51,8 @@
 </script>
 </head>
 
-<body id="top">
+<body onresize="myFunction()">
+
 
   <!--
     - #HEADER
@@ -131,6 +124,7 @@
 
 
 <!-- DAILY FITNESS LOG -->
+<section>
 
       <section class="section hero bg-dark has-after has-bg-image" id="home" aria-label="hero" data-section
         style="background-image: url('./assets/images/hero-bg.png')">
@@ -464,6 +458,14 @@
             	alert("Keep going!");
         	}
     	}
+
+
+	function myFunction() {
+  		let w = window.outerWidth;
+  		let h = window.outerHeight;
+  		let txt = "Window size: width=" + w + ", height=" + h;
+  		document.getElementById("demo").innerHTML = txt;
+		}
 	</script>
         </table>
 
@@ -500,9 +502,76 @@
     </div>
 	
 </div>
+</section>
 
 <!-- DAILY FITNESS LOG ends here -->
 
+<!---reward card --->
+
+<section>
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">
+                <img src="./assets/images/Card_header.png" width="250" height="250" loading="lazy">
+            </a>
+        </div>
+    </div>
+</nav>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            <ul class="score">
+                <li class='points'></li>
+                <li class='points'></li>
+                <li class='points'></li>
+                <li class='points'></li>
+                <li class='points'></li>
+                <li class='points'></li>
+                <li class='points'></li>
+                <li class='points'></li>
+                <li class='points'></li>
+                <li class='points'></li>
+            </ul>
+        </div>
+        <div id="space" class="col-sm-12">
+            <button type="button" id="addpoints" class="btn btn-default btn-block">ADD POINTS</button>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<script>
+    $(document).ready(function(){
+    $("#addpoints").click(function() {
+        // Add a point
+        $(".score").prepend("<li class='points-on'></li>");
+	$(".score li.points").last().remove();
+
+        // Check the number of points
+        var pointsCount = $(".score .points-on").length;
+
+        // Update the points count text (optional)
+        $(".points-count").text("Points: " + pointsCount);
+
+        // If points reach 10, show the "Voucher" button and reset points
+        if (pointsCount === 10) {
+            $(".score").after('<button type="button" id="voucher" class="btn btn-primary btn-block" style = "top : 5px; bottom: 5px;">Redeem Voucher</button>');
+            $(".points-on").remove();  // Reset points
+        }
+    });
+
+	//point count 
+    $(".score").before('<div class="points-count">Points: 0</div>');
+
+    // Voucher button click event (optional)
+    $(document).on("click", "#voucher", function() {
+        alert("Voucher sent to your address ab******@*****.com");
+        $(this).remove();  // Remove the voucher button
+    });
+});
+</script>
+</section>
 
 
 </main>
